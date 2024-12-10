@@ -1,20 +1,28 @@
 import { Hono } from "hono";
-import Counter from "./components/Button";
+import {Counter} from "./components/Button";
+import { css, cx, keyframes, Style } from 'hono/css'
 const app = new Hono()
 
-const View = () =>{
-  return(
-    <html>
-    <body>
-      <h1>No ando piola xd</h1>
-      <Counter/>
-    </body>
-    </html>
-  )
-}
 
 app.get('/', (c) => {
-  return c.html(<View/>)
+  const BodyClass = css`
+  background-color: orange;
+  color: white;
+  padding: 1rem;
+`
+/*se debe usar las comilla invertidas y la palabra reservada css para aplicar estilos ademas de pone en el head
+la palabra reservada <Style/>.El primer paso es poner -->import { css, cx, keyframes, Style } from 'hono/css'
+*/
+  return c.html(    
+    <html>
+      <head>
+        <Style/>
+      </head>
+    <body class={BodyClass}>
+      <h1>De a poquito :v</h1>
+      <Counter/>
+    </body>
+    </html>)
 })
 
 export default app

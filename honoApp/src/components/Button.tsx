@@ -1,6 +1,5 @@
 import { useState } from 'hono/jsx'
 import { render } from 'hono/jsx/dom'
-
 function Counter() {
   const [count, setCount] = useState(0)
   return (
@@ -10,4 +9,4 @@ function Counter() {
     </div>
   )
 }
-export default Counter
+export {Counter}
