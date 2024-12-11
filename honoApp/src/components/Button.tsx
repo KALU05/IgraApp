@@ -1,11 +1,11 @@
 import { useState } from 'hono/jsx'
-import { render } from 'hono/jsx/dom'
+import { buttonStyle } from './styles'
 function Counter() {
   const [count, setCount] = useState(0)
   return (
     <div>
       <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button class={buttonStyle} onClick={() => setCount(count + 1)}>Increment</button>
     </div>
   )
 }
