@@ -1,11 +1,7 @@
 import { css } from 'hono/css'
 
-export const buttonStyle = css`
-background-color:black;
-color:white;
-`
 export const BodyClass = css`
-background-color: orange;
+background-color:#a5b4fc;
 color: white;
 padding: 1rem;
 `
